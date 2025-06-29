@@ -75,12 +75,13 @@ form {
 
 
 .navbar-mentz a{
+    color: white;
     text-decoration: none;
     margin: 0 10px;
     padding-right: 65px;
 }
 
-.navbar-mentz a:visited{
+.navbar-mentz ul li a:visited{
     color: white;
 }
 

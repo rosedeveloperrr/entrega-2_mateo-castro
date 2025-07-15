@@ -1,0 +1,607 @@
+@import "./sass-styles/variables";
+@import "./sass-styles/header";
+@import "./sass-styles/footer";
+@import "./sass-styles/media-queries";
+@import "./sass-styles/reset-css";
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 36px;
+
+  main {
+    h2 {
+      font-size: $lg-text;
+    }
+    h3 {
+      color: $secondary-color;
+      text-align: center;
+      margin-top: 80px;
+      font-size: $md-text;
+      font-weight: 700;
+      margin-bottom: 55px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 40px;
+    }
+    .imagen-con-texto {
+      padding: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $primary-color;
+      height: 345px;
+      overflow: hidden;
+
+      h2,
+      h3 {
+        max-width: 700px;
+        font-size: $lg-text;
+        position: relative;
+        z-index: 1;
+        margin-left: 65px;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 48px;
+        color: $primary-color;
+        text-align: start;
+        margin: 43px 0 0 70px;
+      }
+    }
+    .imagen-con-texto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(../assets/gamer-banner.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      filter: blur(2px);
+      z-index: 0;
+    }
+    .imagen-con-texto_catalogo {
+      padding: 54px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      color: $primary-color;
+      height: 345px;
+      overflow: hidden;
+
+      h2 {
+        z-index: 1;
+        text-align: start;
+      }
+    }
+    .imagen-con-texto_catalogo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(../assets/setup-banner.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      filter: blur(5px);
+      z-index: 0;
+    }
+    .rangos-juegos {
+      ul {
+        display: flex;
+        list-style: none;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+          img {
+            width: 220px;
+            height: 216px;
+          }
+          #rango-silver-cs2 {
+            width: 200px;
+            height: 80px;
+          }
+        }
+      }
+    }
+    .presentacion-productos {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 48px;
+        font-weight: bold;
+        color: $secondary-color;
+        text-align: center;
+        margin-top: 90px;
+      }
+      p {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 40px;
+      }
+      .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+          "imagen-1 imagen-2"
+          "texto-1 texto-2";
+        justify-items: center;
+        gap: 0 250px;
+        margin: 40px auto;
+
+        .item-texto-1 {
+          grid-area: texto-1;
+        }
+        .item-texto-2 {
+          grid-area: texto-2;
+        }
+        .item-imagen-1 {
+          grid-area: imagen-1;
+        }
+        .item-imagen-2 {
+          grid-area: imagen-2;
+          align-self: center;
+        }
+        img {
+          width: 411px;
+          height: auto;
+          object-fit: contain;
+        }
+        h4 {
+          margin-bottom: 102px;
+        }
+      }
+      .btn-primary_custom-class {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        width: 230px;
+      }
+      .btn-primary_custom-class:hover {
+        background-color: #097c7a;
+        border-color: $secondary-color;
+      }
+    }
+    .filtros {
+      margin: 35px 0;
+      .primary-filter-button {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        width: 315px;
+        font-size: 24px;
+        border-radius: 15px;
+        margin-left: 25px;
+      }
+      .primary-filter-button:hover {
+        background-color: #097c7a;
+        border-color: $secondary-color;
+      }
+      .outline-filter-button {
+        border-color: $secondary-color;
+        color: $secondary-color;
+        width: 215px;
+        font-size: 24px;
+        border-radius: 15px;
+        margin-left: 25px;
+      }
+
+      .outline-filter-button:hover {
+        border-color: $secondary-color;
+        color: $primary-color;
+        background-color: $secondary-color;
+      }
+    }
+    .productos-catalogo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      justify-items: center;
+      gap: 0 281px;
+      grid-template-areas:
+        "imagen-1 imagen-2 imagen-3"
+        "texto-1 texto-2 texto-3"
+        "imagen-4 imagen-5 imagen-6"
+        "texto-4 texto-5 texto-6";
+      margin: 120px 50px;
+
+      img {
+        width: 250px;
+        height: auto;
+      }
+      a {
+        font-size: 32px;
+        color: $secondary-color;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .producto-1 {
+        grid-area: imagen-1;
+      }
+
+      .nombre-producto-1 {
+        grid-area: texto-1;
+      }
+
+      .producto-2 {
+        grid-area: imagen-2;
+      }
+      .nombre-producto-2 {
+        grid-area: texto-2;
+      }
+
+      .producto-3 {
+        grid-area: imagen-3;
+      }
+      .nombre-producto-3 {
+        grid-area: texto-3;
+      }
+
+      .producto-4 {
+        grid-area: imagen-4;
+      }
+      .nombre-producto-4 {
+        grid-area: texto-4;
+      }
+
+      .producto-5 {
+        grid-area: imagen-5;
+      }
+      .nombre-producto-5 {
+        grid-area: texto-5;
+      }
+
+      .producto-6 {
+        grid-area: imagen-6;
+      }
+      .nombre-producto-6 {
+        grid-area: texto-6;
+      }
+    }
+    .presentacion-equipo {
+      display: flex;
+      flex-direction: column;
+      max-width: 1267px;
+      margin: 200px 0 305px 45px;
+      margin-top: 200px;
+      margin-bottom: 305px;
+
+      h2 {
+        color: $secondary-color;
+        font-weight: 600;
+        font-size: 48px;
+        margin-bottom: 55px;
+      }
+      p {
+        font-size: 40px;
+        margin-bottom: 115px;
+      }
+    }
+    .btn-primary_custom-class {
+        background-color: $secondary-color !important;
+        border-color: $secondary-color !important;
+        font-size: 24px !important;
+        width: 200px !important;
+    }
+    .sobre-nosotros-extendido {
+      padding: 40px 125px;
+
+      h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+        color: $secondary-color;
+      }
+      span {
+        font-style: italic;
+      }
+      h3 {
+        font-size: 32px;
+        text-align: start;
+        max-width: 1000px;
+        margin: 45px auto 60px auto;
+      }
+      p {
+        font-size: 24px;
+      }
+
+      .historia {
+        font-weight: normal;
+        font-size: 24px;
+
+        span {
+          font-weight: bold;
+          font-style: normal;
+        }
+        ul {
+          margin-top: 1em;
+          font-weight: 600;
+        }
+      }
+      .frase-1 {
+        h3 {
+          font-weight: normal;
+          color: $text-color;
+          font-size: $md-text;
+          text-align: start;
+          margin: 41px 0;
+          max-width: 455px;
+        }
+        span {
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+      .frase-2 {
+        @extend .frase-1;
+        h3 {
+          max-width: 706px;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+//Tablet
+@include tablet{
+    body{
+        main{
+            .presentacion-productos{
+                padding: 50px;
+            
+                .productos{
+                    gap: 0 150px;
+                    .item-imagen-1{
+                        img{
+                            width: 250px;
+                            height: auto;
+                        }
+                    }
+                    .item-imagen-2{
+                        img{
+                            width: 250px;
+                            height: auto;
+                        }
+                        
+                    }
+                }
+            }
+            .presentacion-equipo{
+                margin: 100px 0 200px 0px;
+                padding: 0 50px;
+                h2{
+                    font-size: 36px;
+                }
+                p{
+                    font-size: 32px;
+                }
+
+            }
+            .btn-primary_custom-class {
+                background-color: $secondary-color !important;
+                border-color: $secondary-color !important;
+                font-size: 24px !important;
+                width: 200px !important;
+            }
+
+            .productos-catalogo{
+
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                justify-items: center;
+                align-items: center;
+                gap: 0 50px;
+                margin: 0;
+                grid-template-areas:
+                "imagen-1 imagen-2"
+                "texto-1 texto-2"
+                "imagen-3 imagen-4"
+                "texto-3 texto-4"
+                "imagen-5 imagen-6"
+                "texto-5 texto-6";
+
+            }
+        }
+    }
+}
+
+//Mobile
+@include mobile {
+  body {
+    font-size: 16px;
+    main {
+      .imagen-con-texto {
+        height: 184px;
+        h2 {
+          font-size: 32px;
+          margin: 0 0 5px 0;
+        }
+        h3 {
+          font-size: 16px;
+          text-align: end;
+          margin: 0;
+        }
+      }
+      h3{
+        font-size: 24px;
+        margin-top: 40px;
+      }
+      .imagen-con-texto_catalogo {
+        height: 187px;
+        h2 {
+          font-size: 32px;
+        }
+      }
+      .filtros {
+        margin: 18px 0;
+        button:nth-child(3) {
+          display: none;
+        }
+        button:nth-child(4) {
+          display: none;
+        }
+        .primary-filter-button {
+          background-color: $secondary-color;
+          border-color: $secondary-color;
+          width: 130px;
+          font-size: 14px;
+          border-radius: 15px;
+          margin-left: 18px;
+        }
+        .primary-filter-button:hover {
+          background-color: #097c7a;
+          border-color: $secondary-color;
+        }
+        .outline-filter-button {
+          border-color: $secondary-color;
+          color: $secondary-color;
+          width: 130px;
+          font-size: 14px;
+          border-radius: 15px;
+          margin-left: 18px;
+        }
+      }
+      .rangos-juegos {
+        ul {
+          padding: 0;
+          li {
+            img {
+              height: 55px;
+              width: 55px;
+            }
+            #rango-silver-cs2 {
+            width: 55px;
+            height: auto;
+          }
+          }
+          
+        }
+      }
+      .presentacion-productos {
+        padding: 40px;
+        h2 {
+          font-size: 20px;
+          margin: 0;
+        }
+        p {
+          font-size: 16px;
+          margin: 15px auto;
+        }
+
+        .productos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        
+            .item-imagen-1 {
+                img {
+                width: 304px;
+                height: 171px;
+                }
+            }
+            .item-imagen-2 {
+                img {
+                    width: 250px;
+                    height: auto;
+                }
+            }
+          h4 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bolder;
+          }
+        }
+        .btn-primary_custom-class {
+        background-color: $secondary-color !important;
+        border-color: $secondary-color !important;
+        width: 200px !important;
+        font-size: 15px !important;
+        }
+      }
+      .productos-catalogo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 0 50px;
+        margin: 0;
+        grid-template-areas:
+          "imagen-1 imagen-2"
+          "texto-1 texto-2"
+          "imagen-3 imagen-4"
+          "texto-3 texto-4"
+          "imagen-5 imagen-6"
+          "texto-5 texto-6";
+
+        img {
+          width: 125px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+      .presentacion-equipo {
+        padding: 18px;
+        margin: 0;
+        h2 {
+          font-size: 24px;
+          font-weight: bolder;
+          max-width: 360px;
+          margin: 0 0 25px 0;
+        }
+        p {
+          font-size: 16px;
+          margin: 0 0 35px 0;
+        }
+        
+        .btn-primary_custom-class {
+        background-color: $secondary-color !important;
+        border-color: $secondary-color !important;
+        width: 200px !important;
+        font-size: 15px !important;
+        }
+        
+      }
+      .sobre-nosotros-extendido {
+        padding: 18px;
+        h2 {
+          font-size: 32px;
+          margin-top: 38px;
+          margin-bottom: 14px;
+        }
+        h3 {
+          font-size: 20px;
+          max-width: 404px;
+          margin: 0;
+        }
+        p {
+          font-size: 16px;
+          margin-top: 25px;
+        }
+        .historia {
+          ul {
+            font-size: 16px;
+          }
+        }
+        .frase-1 {
+          h3 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+}

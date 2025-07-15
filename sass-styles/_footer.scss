@@ -1,0 +1,191 @@
+@import "variables";
+@import "media-queries";
+
+body{
+    footer{
+            display: flex;
+            justify-content: space-between;
+            background-color: $secondary-color;
+            height: 169px;
+            width: 100%;
+            overflow: hidden;
+            padding: 25px;
+            position: static;
+
+            form{
+                display: flex;
+                justify-content: center;
+            }
+
+            .newsletter{
+
+                h3{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $primary-color;
+                    margin-bottom: 16px;
+                }
+
+                input[type=text]{
+                    font-size: 13px;
+                    width: 300px;
+                    height: 40px;
+                    padding: 10px 0 10px 17px;
+                    color: $text-color;
+                    border-radius: 5px 0 0 5px;
+                    border: 0;
+                }
+
+                input[type=submit]{
+                    background-color: #FF8800;
+                    color: $primary-color;
+                    font-size: 32px;
+                    font-weight: bold;
+                    height: 40px;
+                    width: 40px;
+                    border: 0;
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+            .social-media{
+                h3{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $primary-color;
+                }
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    list-style: none;
+                    padding: 0;
+                    li{
+                        margin-right: 25px;
+                    }
+                }
+            }
+            .footer-eslogan{
+                color: $primary-color;
+                padding: 20px;
+                text-align: left;
+                h3{
+                    font-style: italic;
+                    font-size: $md-text;
+                    font-weight: bolder;
+                    margin-bottom: 5px;
+                }
+                .marca-eslogan{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+                .eslogan{
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    max-width: 250px;
+                }
+                .copyright{
+                    font-size: 16px;
+                }
+            }
+    }
+}
+
+// Tablet
+@include tablet{
+    body{
+        footer{
+            height: 200px;
+
+            .newsletter{
+                h3{
+                    font-size: 24px;
+                }
+                input[type=text]{
+                    height: 40px;
+                    width: 250px;
+                    font-size: 16px;
+                }
+                input[type=submit]{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 20px;
+                }
+            }
+
+            .social-media{
+                align-self: center;
+                justify-content: center;
+
+                ul{
+                    margin: 0;
+                }
+
+                svg{
+                    height: 40px;
+                    width: 40px;
+                }
+                
+                h3, .social-media-linkedin, .social-media-youtube{
+                    display: none;
+                }
+
+            }
+
+            .footer-eslogan{
+                    display: none;
+            }
+        }
+    }
+}
+
+// Mobile
+@include mobile{
+    body{
+        footer{
+            height: 133px;
+
+            .newsletter{
+                h3{
+                    font-size: 14px;
+                }
+                input[type=text]{
+                    height: 26px;
+                    width: 176px;
+                    font-size: 10px;
+                }
+                input[type=submit]{
+                    width: 26px;
+                    height: 26px;
+                    font-size: 13px;
+                }
+            }
+
+            .social-media{
+                align-self: center;
+                justify-content: center;
+
+                ul{
+                    margin: 0;
+                }
+
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+                
+                h3, .social-media-linkedin, .social-media-youtube{
+                    display: none;
+                }
+
+            }
+
+            .footer-eslogan{
+                    display: none;
+            }
+        }
+    }
+}

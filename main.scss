@@ -288,15 +288,53 @@ body {
         font-size: 24px !important;
         width: 200px !important;
     }
-    .sobre-nosotros-extendido {
-      padding: 40px 125px;
 
-      h2 {
+    .imagen-con-texto_about-us::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(../assets/about-us_banner.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      filter: blur(4px);
+      z-index: 0;
+    }
+
+    .imagen-con-texto_about-us {
+      padding: 54px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $primary-color;
+      height: 960px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      h2{
+        color: inherit;
+        font-weight: 700;
         text-align: center;
-        font-size: 40px;
-        font-weight: bolder;
-        color: $secondary-color;
+        font-size: 128px;
+        z-index: inherit;
       }
+      h3{
+        font-size: 60px;
+        color: inherit;
+        z-index: inherit;
+        span{
+          color: inherit;
+          z-index: inherit;
+          font-style: italic;
+        }
+      }
+    }
+
+
+    .sobre-nosotros-extendido {
+      padding: 65px 125px;
+
       span {
         font-style: italic;
       }
@@ -307,7 +345,8 @@ body {
         margin: 45px auto 60px auto;
       }
       p {
-        font-size: 24px;
+        font-size: 48px;
+        max-width: 1000px;
       }
 
       .historia {
@@ -319,18 +358,25 @@ body {
           font-style: normal;
         }
         ul {
+          list-style-type: none;
           margin-top: 1em;
-          font-weight: 600;
+          font-weight: 800;
+          text-align: center;
+          font-size: 48px;
+          color: $secondary-color;
+          li {
+            margin-bottom: 20px;
+          }
         }
       }
       .frase-1 {
         h3 {
           font-weight: normal;
           color: $text-color;
-          font-size: $md-text;
+          font-size: 60px;
           text-align: start;
           margin: 41px 0;
-          max-width: 455px;
+          max-width: 800px;
         }
         span {
           font-weight: bold;

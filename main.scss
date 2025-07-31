@@ -16,7 +16,7 @@ body {
       color: $secondary-color;
       text-align: center;
       margin-top: 80px;
-      font-size: $md-text;
+      font-size: 48px;
       font-weight: 700;
       margin-bottom: 55px;
     }
@@ -33,6 +33,8 @@ body {
       color: $primary-color;
       height: 345px;
       overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
 
       h2,
       h3 {
@@ -71,9 +73,11 @@ body {
       color: $primary-color;
       height: 345px;
       overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
 
       h2 {
-        z-index: 1;
+        z-index: 3;
         text-align: start;
       }
     }
@@ -113,16 +117,18 @@ body {
       flex-direction: column;
 
       h2 {
-        font-size: 48px;
-        font-weight: bold;
+        font-size: 60px;
+        font-weight: 700;
         color: $secondary-color;
         text-align: center;
         margin-top: 90px;
       }
+      
       p {
         text-align: center;
         font-size: 40px;
         margin-top: 40px;
+        color: $text-color;
       }
       .productos {
         display: grid;
@@ -155,6 +161,8 @@ body {
         }
         h4 {
           margin-bottom: 102px;
+          font-size: 40px;
+          font-weight: 600;
         }
       }
       .btn-primary_custom-class {
@@ -273,13 +281,14 @@ body {
 
       h2 {
         color: $secondary-color;
-        font-weight: 600;
-        font-size: 48px;
+        font-weight: 700;
+        font-size: 60px;
         margin-bottom: 55px;
       }
       p {
         font-size: 40px;
         margin-bottom: 115px;
+        color: $text-color;
       }
     }
     .btn-primary_custom-class {
@@ -302,6 +311,7 @@ body {
     }
 
     .imagen-con-texto_about-us {
+      
       padding: 54px;
       position: relative;
       display: flex;
@@ -333,6 +343,8 @@ body {
 
 
     .sobre-nosotros-extendido {
+      display: flex;
+      flex-direction: column;
       padding: 65px 125px;
 
       span {
@@ -345,51 +357,85 @@ body {
         margin: 45px auto 60px auto;
       }
       p {
-        font-size: 48px;
+        font-size: 36px;
         max-width: 1000px;
+        color: $text-color;
       }
 
       .historia {
         font-weight: normal;
         font-size: 24px;
+        margin-top: 150px;
+        margin-bottom: 250px;
+
+        h3{
+          font-weight: 800;
+          font-size: 72px;
+          margin: 0 0 30px 0;
+          color: $secondary-color;
+          text-align: start;
+        }
 
         span {
           font-weight: bold;
           font-style: normal;
         }
+
+      }
+      .objetivo{
+        align-self: flex-end;
+        margin-bottom: 250px;
+        h3 {
+          text-align: end;
+          font-weight: 800;
+          font-size: 72px;
+          margin: 0 0 30px 0;
+          color: $secondary-color;
+        }
+        h4{
+          font-weight: 700;
+          font-size: 48px;
+          margin-bottom: 30px;
+          color: $secondary-color;
+        }
         ul {
           list-style-type: none;
-          margin-top: 1em;
+          margin: 0.5em;
+          padding: 0;
           font-weight: 800;
-          text-align: center;
-          font-size: 48px;
-          color: $secondary-color;
+          text-align: start;
+          font-size: 36px;
+          background: linear-gradient(90deg, #FFA673, #FFE3BB);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           li {
             margin-bottom: 20px;
           }
         }
       }
-      .frase-1 {
+      .vision {
+        margin-bottom: 250px;
         h3 {
-          font-weight: normal;
-          color: $text-color;
-          font-size: 60px;
+          font-weight: 800;
+          font-size: 72px;
+          margin: 0 0 30px 0;
+          color: $secondary-color;
           text-align: start;
-          margin: 41px 0;
-          max-width: 800px;
         }
-        span {
-          font-weight: bold;
-          font-style: italic;
+        p {
+          font-size: 36px;
+          max-width: 1000px;
         }
       }
-      .frase-2 {
-        @extend .frase-1;
-        h3 {
-          max-width: 706px;
+
+      .contactanos{
+        @extend .vision;
+        align-self: center;
+        h3, p{
+          text-align: center;
         }
-        span {
-          font-weight: bold;
+        span{
+          font-weight: 700;
         }
       }
     }
@@ -455,7 +501,45 @@ body {
                 "texto-5 texto-6";
 
             }
+            .imagen-con-texto_about-us {
+            height: 768px;
+            padding: 20px;
+            h2 {
+                font-size: 48px;
+                text-align: center;
+                margin: 0 0 10px 0;
+            }
+            h3 {
+                font-size: 30px;
+                text-align: center;
+                margin: 0;
+                span {
+                    font-style: italic;
+                }
+              }
+            }
+            .sobre-nosotros-extendido {
+                padding: 25px;
+                h2 {
+                    font-size: 48px;
+                    margin-top: 38px;
+                    margin-bottom: 14px;
+                }
+                h3 {
+                    font-size: 30px;
+                    max-width: 404px;
+                    margin: 0;
+                }
+                p {
+                    font-size: 24px;
+                    margin-top: 25px;
+                }
+                .historia, .objetivo, .vision, .contactanos {
+                    margin-bottom: 125px;
+                }
+            }
         }
+        
     }
 }
 
@@ -619,6 +703,24 @@ body {
         }
         
       }
+      .imagen-con-texto_about-us {
+        height: 768px;
+        padding: 20px;
+        h2 {
+          font-size: 32px;
+          text-align: center;
+          margin: 0 0 10px 0;
+        }
+        h3 {
+          font-size: 20px;
+          text-align: center;
+          margin: 0;
+          span {
+            font-style: italic;
+          }
+        }
+      }
+
       .sobre-nosotros-extendido {
         padding: 18px;
         h2 {
@@ -636,15 +738,39 @@ body {
           margin-top: 25px;
         }
         .historia {
+          margin-bottom: 125px;
+          h3{
+            text-align: center;
+          }
+        }
+        .objetivo {
+          margin-bottom: 125px;
+          h3 {
+            text-align: center;
+          }
+          h4 {
+            font-size: 20px;
+            margin-bottom: 2.50rem;
+          }
           ul {
+            font-size: 24px;
+          }
+        }
+        .vision {
+          margin-bottom: 125px;
+          h3 {
+            text-align: center;
+          }
+          p {
             font-size: 16px;
           }
         }
-        .frase-1 {
-          h3 {
-            font-size: 20px;
-            margin-top: 25px;
-            margin-bottom: 6px;
+
+        .contactanos {
+          margin-bottom: 125px;
+          h3{
+            text-align: center;
+            font-size: 60px;
           }
         }
       }

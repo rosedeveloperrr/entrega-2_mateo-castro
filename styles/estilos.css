@@ -699,6 +699,12 @@ body main .sobre-nosotros-extendido .contactanos span {
   body main .sobre-nosotros-extendido .objetivo h3 {
     text-align: start;
   }
+  body main .sobre-nosotros-extendido .contactanos h3 {
+    text-align: start;
+  }
+  body main .sobre-nosotros-extendido .contactanos p {
+    text-align: start;
+  }
 }
 @media screen and (max-width: 768px) {
   body {

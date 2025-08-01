@@ -690,11 +690,14 @@ body main .sobre-nosotros-extendido .contactanos span {
     margin: 0;
   }
   body main .sobre-nosotros-extendido p {
-    font-size: 24px;
+    font-size: 36px;
     margin-top: 25px;
   }
   body main .sobre-nosotros-extendido .historia, body main .sobre-nosotros-extendido .objetivo, body main .sobre-nosotros-extendido .vision, body main .sobre-nosotros-extendido .contactanos {
     margin-bottom: 125px;
+  }
+  body main .sobre-nosotros-extendido .objetivo h3 {
+    text-align: start;
   }
 }
 @media screen and (max-width: 768px) {
@@ -767,11 +770,11 @@ body main .sobre-nosotros-extendido .contactanos span {
     padding: 40px;
   }
   body main .presentacion-productos h2 {
-    font-size: 20px;
+    font-size: 36px;
     margin: 0;
   }
   body main .presentacion-productos p {
-    font-size: 16px;
+    font-size: 20px;
     margin: 15px auto;
   }
   body main .presentacion-productos .productos {
@@ -814,20 +817,20 @@ body main .sobre-nosotros-extendido .contactanos span {
     width: 125px;
   }
   body main .productos-catalogo a {
-    font-size: 14px;
+    font-size: 16px;
   }
   body main .presentacion-equipo {
     padding: 18px;
-    margin: 0;
+    margin: 0 0 50px 0;
   }
   body main .presentacion-equipo h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bolder;
     max-width: 360px;
     margin: 0 0 25px 0;
   }
   body main .presentacion-equipo p {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 0 35px 0;
   }
   body main .presentacion-equipo .btn-primary_custom-class {
@@ -856,11 +859,6 @@ body main .sobre-nosotros-extendido .contactanos span {
   body main .sobre-nosotros-extendido {
     padding: 18px;
   }
-  body main .sobre-nosotros-extendido h2 {
-    font-size: 32px;
-    margin-top: 38px;
-    margin-bottom: 14px;
-  }
   body main .sobre-nosotros-extendido h3 {
     font-size: 20px;
     max-width: 404px;
@@ -875,15 +873,20 @@ body main .sobre-nosotros-extendido .contactanos span {
   }
   body main .sobre-nosotros-extendido .historia h3 {
     text-align: center;
+    font-size: 60px;
+  }
+  body main .sobre-nosotros-extendido .historia p {
+    font-size: 24px;
   }
   body main .sobre-nosotros-extendido .objetivo {
     margin-bottom: 125px;
   }
   body main .sobre-nosotros-extendido .objetivo h3 {
     text-align: center;
+    font-size: 60px;
   }
   body main .sobre-nosotros-extendido .objetivo h4 {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 2.5rem;
   }
   body main .sobre-nosotros-extendido .objetivo ul {
@@ -893,10 +896,14 @@ body main .sobre-nosotros-extendido .contactanos span {
     margin-bottom: 125px;
   }
   body main .sobre-nosotros-extendido .vision h3, body main .sobre-nosotros-extendido .contactanos h3 {
+    font-size: 60px;
     text-align: center;
   }
   body main .sobre-nosotros-extendido .vision p, body main .sobre-nosotros-extendido .contactanos p {
-    font-size: 16px;
+    font-size: 24px;
+  }
+  body main .sobre-nosotros-extendido .vision span, body main .sobre-nosotros-extendido .contactanos span {
+    font-weight: 700;
   }
   body main .sobre-nosotros-extendido .contactanos {
     margin-bottom: 125px;
